@@ -137,24 +137,3 @@ npm test
 npm run build && npx serve -s build
 ```
 
-## 📖 Additional Documentation
-
-- **Complete technical implementation** documented in code comments
-- **Architecture patterns** following React/Redux best practices
-
-## 👨‍💻 Developed By
-
-**Jastk45** - Blockchain Developer Technical Test  
-**Date**: August 2025  
-**Repository**: https://github.com/jastk45/-ecommerce-blockchain
-
----
-
-### 🎯 Note for Evaluators
-
-This implementation demonstrates solid knowledge in:
-- Web3 wallet integration
-- React application state management
-- Blockchain service architecture
-- UX/UI for decentralized applications
-- Error handling and edge cases
