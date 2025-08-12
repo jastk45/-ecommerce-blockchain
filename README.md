@@ -1,160 +1,160 @@
 # 🔗 Blockchain Developer Technical Test
 
-## 🎯 Objetivos de la Prueba Técnica
+## 🎯 Technical Test Objectives
 
-Esta aplicación e-commerce ha sido extendida con funcionalidades blockchain para demostrar:
+This e-commerce application has been extended with blockchain functionalities to demonstrate:
 
-- ✅ **Conexión/Desconexión de Wallet** con MetaMask
-- ✅ **UI Responsiva** que muestra la dirección del usuario cuando está conectado
-- ✅ **Detección de Cambios de Red** automática
-- ✅ **Estados de Transacción** (loading/pending/success/error)
-- ✅ **Confirmaciones** antes de ejecutar acciones
-- ✅ **Manejo de Errores** robusto
+- ✅ **Wallet Connection/Disconnection** with MetaMask
+- ✅ **Responsive UI** that displays user address when connected
+- ✅ **Automatic Network Change Detection**
+- ✅ **Transaction States** (loading/pending/success/error)
+- ✅ **User Action Confirmations**
+- ✅ **Robust Error Handling**
 
-## 🚀 Instalación y Ejecución
+## 🚀 Installation and Setup
 
-### Prerrequisitos
+### Prerequisites
 - Node.js 14+
-- MetaMask instalado en el navegador
+- MetaMask installed in browser
 
-### Pasos de Instalación
+### Installation Steps
 
-1. **Clonar el repositorio**
+1. **Clone the repository**
 ```bash
 git clone https://github.com/jastk45/-ecommerce-blockchain.git
 cd ecommerce-blockchain
 ```
 
-2. **Instalar dependencias**
+2. **Install dependencies**
 ```bash
 npm install
 ```
 
-3. **Ejecutar la aplicación**
+3. **Run the application**
 ```bash
 npm start
 ```
 
-4. **Abrir en el navegador**
+4. **Open in browser**
 ```bash
 http://localhost:3000
 ```
 
-## 🧪 Cómo Probar las Funcionalidades
+## 🧪 How to Test the Features
 
-### 1. Conexión de Wallet
-- Ve a la navbar superior
-- Haz clic en **"Connect Wallet"**
-- Acepta la conexión en MetaMask
-- Verifica que aparece tu dirección en el dropdown
+### 1. Wallet Connection
+- Go to the top navbar
+- Click on **"Connect Wallet"**
+- Accept the connection in MetaMask
+- Verify that your address appears in the dropdown
 
-### 2. Cambio de Red
-- Cambia la red en MetaMask
-- Observa que la UI detecta automáticamente el cambio
-- La nueva red se muestra en el componente wallet
+### 2. Network Change
+- Change the network in MetaMask
+- Observe that the UI automatically detects the change
+- The new network is displayed in the wallet component
 
-### 3. Transacción Demo
-- Con wallet conectado, haz clic en **"Demo Transaction"**
-- Confirma la acción en el prompt
-- Observa los estados: Loading → Pending → Success/Error
+### 3. Demo Transaction
+- With wallet connected, click on **"Demo Transaction"**
+- Confirm the action in the prompt
+- Observe the states: Loading → Pending → Success/Error
 
-## 🛠️ Stack Tecnológico
+## 🛠️ Technology Stack
 
 ### Frontend
-- **React 18.2.0** - Framework principal
-- **Redux Toolkit** - Manejo de estado global
-- **Bootstrap 5** - UI y diseño responsivo
-- **React Hot Toast** - Notificaciones
+- **React 18.2.0** - Main framework
+- **Redux Toolkit** - Global state management
+- **Bootstrap 5** - UI and responsive design
+- **React Hot Toast** - Notifications
 
 ### Blockchain
-- **ethers.js 5.4.6** - Interacción con blockchain
-- **@metamask/detect-provider** - Detección de MetaMask
+- **ethers.js 5.4.6** - Blockchain interaction
+- **@metamask/detect-provider** - MetaMask detection
 - **MetaMask** - Wallet integration
 
-## 📁 Estructura del Código Blockchain
+## 📁 Blockchain Code Structure
 
 ```
 src/
 ├── components/
-│   └── WalletConnect.jsx          # Componente principal de wallet
+│   └── WalletConnect.jsx          # Main wallet component
 ├── hooks/
-│   └── useWalletSimple.js         # Hook personalizado para wallet
+│   └── useWalletSimple.js         # Custom wallet hook
 ├── services/
-│   └── walletService.js           # Servicio de blockchain
+│   └── walletService.js           # Blockchain service
 ├── redux/
-│   ├── action/walletActions.js    # Acciones Redux
-│   └── reducer/walletReducer.js   # Reducer de wallet
-└── components/Navbar.jsx          # Integración en navbar
+│   ├── action/walletActions.js    # Redux actions
+│   └── reducer/walletReducer.js   # Wallet reducer
+└── components/Navbar.jsx          # Navbar integration
 ```
 
-## ⚙️ Características Técnicas
+## ⚙️ Technical Features
 
-### Manejo de Estado
-- **Redux Store** para estado global de wallet y transacciones
-- **Persistencia** de conexión durante la sesión
-- **Sincronización** automática con eventos de MetaMask
+### State Management
+- **Redux Store** for global wallet and transaction state
+- **Session persistence** of connection
+- **Automatic synchronization** with MetaMask events
 
-### Detección de Red
-- Listeners para `chainChanged` y `accountsChanged`
-- Actualización automática de UI
-- Manejo de desconexiones
+### Network Detection
+- Listeners for `chainChanged` and `accountsChanged`
+- Automatic UI updates
+- Disconnection handling
 
 ### UI/UX
-- **Estados visuales** claros (conectado/desconectado)
-- **Loading states** durante transacciones
-- **Error handling** con mensajes descriptivos
-- **Confirmaciones** antes de acciones críticas
+- **Clear visual states** (connected/disconnected)
+- **Loading states** during transactions
+- **Error handling** with descriptive messages
+- **Confirmations** before critical actions
 
-### Seguridad
-- Validación de conexión antes de transacciones
-- Manejo seguro de errores de MetaMask
-- No exposición de claves privadas
+### Security
+- Connection validation before transactions
+- Secure handling of MetaMask errors
+- No private key exposure
 
-## 📋 Funcionalidades Implementadas
+## 📋 Implemented Features
 
-| Requisito | Estado | Descripción |
-|-----------|--------|-------------|
-| Conexión de Wallet | ✅ | Integración completa con MetaMask |
-| Display de Dirección | ✅ | Muestra dirección en navbar cuando conectado |
-| Detección de Red | ✅ | Detecta cambios de red automáticamente |
-| Estados de Transacción | ✅ | Loading → Pending → Success/Error |
-| Confirmaciones | ✅ | Prompts antes de ejecutar acciones |
-| Manejo de Errores | ✅ | Errores descriptivos y recuperación |
+| Requirement | Status | Description |
+|-------------|--------|-------------|
+| Wallet Connection | ✅ | Complete MetaMask integration |
+| Address Display | ✅ | Shows address in navbar when connected |
+| Network Detection | ✅ | Automatically detects network changes |
+| Transaction States | ✅ | Loading → Pending → Success/Error |
+| Confirmations | ✅ | Prompts before executing actions |
+| Error Handling | ✅ | Descriptive errors and recovery |
 
-## 🔧 Comandos Disponibles
+## 🔧 Available Commands
 
 ```bash
-# Desarrollo
+# Development
 npm start
 
-# Build para producción
+# Production build
 npm run build
 
-# Ejecutar tests
+# Run tests
 npm test
 
-# Análisis de bundle
+# Bundle analysis
 npm run build && npx serve -s build
 ```
 
-## 📖 Documentación Adicional
+## 📖 Additional Documentation
 
-- **`BLOCKCHAIN_README.md`** - Documentación técnica detallada
-- **`SUBMISSION_GUIDE.md`** - Guía completa de evaluación
+- **Complete technical implementation** documented in code comments
+- **Architecture patterns** following React/Redux best practices
 
-## 👨‍💻 Desarrollado Por
+## 👨‍💻 Developed By
 
 **Jastk45** - Blockchain Developer Technical Test  
-**Fecha**: Agosto 2025  
-**Repositorio**: https://github.com/jastk45/-ecommerce-blockchain
+**Date**: August 2025  
+**Repository**: https://github.com/jastk45/-ecommerce-blockchain
 
 ---
 
-### 🎯 Nota para Evaluadores
+### 🎯 Note for Evaluators
 
-Esta implementación demuestra conocimientos sólidos en:
-- Integración de wallets Web3
-- Manejo de estado en aplicaciones React
-- Arquitectura de servicios blockchain
-- UX/UI para aplicaciones descentralizadas
-- Manejo de errores y casos edge
+This implementation demonstrates solid knowledge in:
+- Web3 wallet integration
+- React application state management
+- Blockchain service architecture
+- UX/UI for decentralized applications
+- Error handling and edge cases
